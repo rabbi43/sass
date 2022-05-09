@@ -1,0 +1,111 @@
+@import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+/*text-align,left,right,center,font,font-weight,font-size,font-family,bold,bolder,lighter,color,green,brown,red,yellow,pink,deeppink,hotpink,cyan,gray,black,purple,violet,background-color,background,padding,margin border box-shadow px 10px 5px 7px line-height width height font-style italic normal text-decoration text-transform text-indentation letter spacing word spacing text-shadow border border-radius bottom top table-style POSITION: position relative absolute fixed sticky display block inline-block flex flex-wrap wrap nowrap justify-content align-items float grid grid-template-columns grid-template-row grid-gap html scroll-behavior smooth none 2px solid dotted dashed gradient rem,box-sizing,opacity,pointer-events,pink,hotpink,seagreen,green,coral,indigo,white,whitesmoke*/
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family: 'Macondo', cursive;
+}
+
+a{
+   color:white;
+   text-decoration:none;
+}
+
+@font-face{
+   font-family:fhr;
+   src:url();
+}
+
+@mixin paraStyle($size){
+   text-align:justify;
+   font-weight:bold;
+   color:#444;
+   font-size:$size;
+}
+
+header{
+   background:$m-bg;
+   padding:10px;
+   display:flex;
+   justify-content:center;
+   height:100px;
+   align-items:center;
+}
+
+header a{
+   margin:0 5px;
+   font-size:1.6rem;
+}
+
+.card-container{
+   margin:20px;
+}
+
+.card{
+   background:antiquewhite;
+   color:#000;
+   
+}
+
+.card-body{
+   padding:10px;
+}
+
+.card-body p{
+   @include paraStyle(13px);
+}
+
+
+.demo-style{
+   background:yellow;
+   color:#000;
+   padding:10px;
+   border:2px solid black;
+   border-radius:5px;
+   font-family:cursive;
+   margin:10px;
+   font-size:20px;
+}
+
+@mixin myStyle($size){
+   @if $size == small{
+      font-size:10px;
+   }
+   @else if $size == medium{
+      font-size:15px;
+   }
+   @else if $size == large{
+      font-size:22px;
+   }
+}
+
+#para{
+   @extend .demo-style;
+   @include myStyle(large);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
